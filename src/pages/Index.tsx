@@ -24,6 +24,7 @@ import aiExample4 from "@/assets/ai-example-4.jpg";
 import aiExample5 from "@/assets/ai-example-5.jpg";
 import aiExample6 from "@/assets/ai-example-6.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import aiHolographicDisplay from "@/assets/ai-holographic-display.jpg";
 
 const Index = () => {
   return (
@@ -83,13 +84,13 @@ const Index = () => {
             <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
               <div className="aspect-video overflow-hidden relative">
                 <img
-                  src="/lovable-uploads/a36e56b1-f6be-4e87-9584-287ecfb7727a.png"
-                  alt="AI Generated Beauty Product with Roses"
+                  src={aiHolographicDisplay}
+                  alt="AI Holographic Display Video Transformation"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <h3 className="text-white font-semibold text-sm">Beauty & Lifestyle</h3>
-                  <p className="text-white/80 text-xs">Elegant product photography</p>
+                  <h3 className="text-white font-semibold text-sm">AI Technology</h3>
+                  <p className="text-white/80 text-xs">Futuristic video transformation</p>
                 </div>
               </div>
             </div>
