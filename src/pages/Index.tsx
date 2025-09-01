@@ -60,7 +60,7 @@ const Index = () => {
             
             <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight">
               Transform Static Images into
-              <span className="block text-black">
+              <span className="block bg-gradient-to-r from-ai-blue to-ai-purple bg-clip-text text-transparent">
                 Dynamic Video Content
               </span>
             </h1>

@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 240 25% 99%;
     --popover-foreground: 234 16% 35%;
 
-    --primary: 245 58% 64%;
-    --primary-foreground: 240 25% 98%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 225 25% 95%;
     --secondary-foreground: 234 16% 35%;
@@ -27,14 +27,14 @@ All colors MUST be HSL.
     --muted: 225 25% 95%;
     --muted-foreground: 234 8% 55%;
 
-    --accent: 260 48% 88%;
-    --accent-foreground: 234 16% 35%;
+    --accent: 320 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    /* AI brand specific colors */
-    --ai-blue: 216 89% 72%;
-    --ai-purple: 260 58% 78%;
-    --ai-gradient-start: 216 89% 72%;
-    --ai-gradient-end: 260 58% 78%;
+    /* AI brand specific colors - Pixwith.ai inspired neon theme */
+    --ai-blue: 180 100% 50%;
+    --ai-purple: 320 100% 50%;
+    --ai-gradient-start: 180 100% 50%;
+    --ai-gradient-end: 320 100% 50%;
     
     /* Hero section colors */
     --hero-gradient: linear-gradient(135deg, hsl(var(--ai-gradient-start)), hsl(var(--ai-gradient-end)));
