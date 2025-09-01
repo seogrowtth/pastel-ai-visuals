@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import { useParams, Link } from "react-router-dom";
 import { findPostBySlug } from "@/data/blogPosts";
@@ -20,7 +21,7 @@ const BlogDetail = () => {
         <section className="pt-24 pb-24 px-4">
           <div className="container mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-display font-bold text-foreground mb-4">Post not found</h1>
-            <p className="text-muted-foreground mb-8">The blog post you are looking for doesn’t exist or was moved.</p>
+            <p className="text-muted-foreground mb-8">The blog post you are looking for doesn't exist or was moved.</p>
             <HeroButton asChild>
               <Link to="/blog">Back to Blog</Link>
             </HeroButton>
@@ -29,6 +30,24 @@ const BlogDetail = () => {
       </div>
     );
   }
+
+  const renderContent = (content: string) => {
+    // Check if content is a heading
+    if (content.startsWith('## ')) {
+      return (
+        <h2 className="text-2xl font-display font-bold text-foreground mt-8 mb-4 first:mt-0">
+          {content.replace('## ', '')}
+        </h2>
+      );
+    }
+    
+    // Regular paragraph
+    return (
+      <p className="text-muted-foreground leading-relaxed mb-4">
+        {content}
+      </p>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -55,9 +74,11 @@ const BlogDetail = () => {
 
       {/* Content */}
       <main className="px-4 py-12">
-        <article className="container mx-auto max-w-3xl prose prose-invert prose-headings:font-display">
-          {post.content.map((para, idx) => (
-            <p key={idx} className="text-muted-foreground leading-relaxed">{para}</p>
+        <article className="container mx-auto max-w-3xl">
+          {post.content.map((content, idx) => (
+            <div key={idx}>
+              {renderContent(content)}
+            </div>
           ))}
         </article>
       </main>
