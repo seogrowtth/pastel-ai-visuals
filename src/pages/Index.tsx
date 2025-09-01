@@ -73,7 +73,7 @@ const Index = () => {
       </section>
 
       {/* AI Generated Examples Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-ai-blue/5 via-background to-ai-purple/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">AI Generated Examples</h2>
