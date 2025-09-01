@@ -2,120 +2,9 @@ import Header from "@/components/Header";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import { Link } from "react-router-dom";
+import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
-  // Helper function to create URL slug from title
-  const createSlug = (title: string) => {
-    return title
-      .toLowerCase()
-      .replace(/[^a-z0-9 -]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-')
-      .trim();
-  };
-
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Best AI Tools to Animate Images into Videos (2025 Guide)",
-      excerpt: "Discover the top AI-powered tools that transform static images into dynamic videos. From beginner-friendly options to professional-grade solutions, find the perfect tool for your creative needs.",
-      author: "Alex Thompson",
-      date: "January 15, 2025",
-      readTime: "12 min read",
-      category: "Tools",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 2,
-      title: "How Image to Video AI is Transforming Social Media Marketing",
-      excerpt: "Learn how brands are revolutionizing their social media presence with AI-generated video content. Explore case studies, best practices, and ROI metrics that matter.",
-      author: "Sarah Martinez",
-      date: "January 12, 2025",
-      readTime: "10 min read",
-      category: "Marketing",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 3,
-      title: "Step-by-Step: How to Turn a Still Photo into a Cinematic Video",
-      excerpt: "Master the art of creating cinematic videos from static images. This comprehensive tutorial covers everything from preparation to final export with professional tips.",
-      author: "David Chen",
-      date: "January 10, 2025",
-      readTime: "15 min read",
-      category: "Tutorial",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 4,
-      title: "Top 5 Motion Styles Every Creator Should Try with AI Video Generators",
-      excerpt: "Explore the most popular and effective motion styles in AI video generation. Learn when and how to use each style to maximize visual impact and engagement.",
-      author: "Emma Rodriguez",
-      date: "January 8, 2025",
-      readTime: "8 min read",
-      category: "Creative",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 5,
-      title: "Why Short-Form Video Beats Static Images for Engagement",
-      excerpt: "Dive deep into the psychology and data behind why video content outperforms static images across all platforms. Discover actionable strategies to boost your engagement rates.",
-      author: "Michael Johnson",
-      date: "January 6, 2025",
-      readTime: "9 min read",
-      category: "Strategy",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 6,
-      title: "Image to Video AI vs Traditional Animation: Which is Right for You?",
-      excerpt: "Compare the pros and cons of AI-powered image animation versus traditional animation methods. Make informed decisions based on budget, timeline, and quality requirements.",
-      author: "Lisa Wang",
-      date: "January 4, 2025",
-      readTime: "11 min read",
-      category: "Comparison",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 7,
-      title: "The Future of AI Video Generation: From Photos to Hollywood-Level Films",
-      excerpt: "Explore the cutting-edge developments in AI video technology and their potential impact on the entertainment industry. What does the future hold for AI-generated content?",
-      author: "Robert Kim",
-      date: "January 2, 2025",
-      readTime: "13 min read",
-      category: "Future",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 8,
-      title: "How Artists & Designers Are Using Image to Video AI to Showcase Portfolios",
-      excerpt: "Discover innovative ways creative professionals are leveraging AI video tools to bring their portfolios to life and attract more clients in competitive markets.",
-      author: "Sophie Brown",
-      date: "December 30, 2024",
-      readTime: "10 min read",
-      category: "Creative",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 9,
-      title: "10 Creative Marketing Campaigns Powered by Image to Video AI",
-      excerpt: "Analyze successful marketing campaigns that utilized AI image-to-video technology. Learn from real-world examples and apply these strategies to your own campaigns.",
-      author: "James Wilson",
-      date: "December 28, 2024",
-      readTime: "14 min read",
-      category: "Marketing",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 10,
-      title: "Choosing the Best AI Image Animator: Features, Specs, and Pricing Compared",
-      excerpt: "A comprehensive comparison of leading AI image animation platforms. Detailed analysis of features, pricing, and performance to help you make the right choice.",
-      author: "Maria Garcia",
-      date: "December 26, 2024",
-      readTime: "16 min read",
-      category: "Review",
-      image: "/api/placeholder/600/400"
-    }
-  ];
 
   const categories = ["All", "Tools", "Marketing", "Tutorial", "Creative", "Strategy", "Comparison", "Future", "Review"];
 
@@ -171,7 +60,7 @@ const Blog = () => {
             {blogPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${createSlug(post.title)}`}
+                to={`/blog/${post.slug}`}
                 className="group block"
               >
                 <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-ai-blue/30 transition-all duration-300 hover:shadow-card cursor-pointer">
