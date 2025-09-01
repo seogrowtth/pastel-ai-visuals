@@ -25,48 +25,6 @@ import aiExample5 from "@/assets/ai-example-5.jpg";
 import aiExample6 from "@/assets/ai-example-6.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
-// Import video thumbnails
-import youtubeThumbnail from "@/assets/youtube-thumbnail.jpg";
-import contentCreatorThumbnail from "@/assets/content-creator-thumbnail.jpg";
-import brandMarketingThumbnail from "@/assets/brand-marketing-thumbnail.jpg";
-import educationThumbnail from "@/assets/education-thumbnail.jpg";
-
-// Pixwith.ai Video Examples - Real videos from their platform
-const videoExamples = [
-  { 
-    id: 1, 
-    title: "YouTubers & Influencers", 
-    description: "Create viral-worthy videos for your channel with AI",
-    category: "YouTube Creator",
-    videoUrl: "https://pixwith.ai/v/youtubers.mp4",
-    thumbnail: youtubeThumbnail
-  },
-  { 
-    id: 2, 
-    title: "Content Creator", 
-    description: "Transform static content into dynamic visuals for social media",
-    category: "Content Creator",
-    videoUrl: "https://pixwith.ai/v/content_creator.mp4",
-    thumbnail: contentCreatorThumbnail
-  },
-  { 
-    id: 3, 
-    title: "Brand Marketing", 
-    description: "Professional marketing videos on a budget-friendly scale",
-    category: "Brand Marketing",
-    videoUrl: "https://pixwith.ai/v/brand_marketing.mp4",
-    thumbnail: brandMarketingThumbnail
-  },
-  { 
-    id: 4, 
-    title: "Education & Training", 
-    description: "Engaging learning content made simple with AI animation",
-    category: "Education",
-    videoUrl: "https://pixwith.ai/v/education_training.mp4",
-    thumbnail: educationThumbnail
-  }
-];
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-hero-gradient">
@@ -114,37 +72,66 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Sample Images Section */}
+      {/* AI Generated Examples Section */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">See Pixwith.ai Video Examples</h2>
-            <p className="text-muted-foreground text-lg">Real video transformations from the Pixwith.ai platform</p>
+            <h2 className="text-3xl font-bold text-foreground mb-4">AI Generated Examples</h2>
+            <p className="text-muted-foreground text-lg">Stunning AI-generated images showcasing the power of artificial intelligence</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {videoExamples.map((example) => (
-              <div 
-                key={example.id} 
-                className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border"
-              >
-                <div className="aspect-video overflow-hidden relative">
-                  <video
-                    className="w-full h-full object-cover"
-                    poster={example.thumbnail}
-                    controls
-                    preload="metadata"
-                  >
-                    <source src={example.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <span className="text-ai-blue text-xs font-medium uppercase tracking-wider mb-1">{example.category}</span>
-                    <h3 className="text-white font-semibold text-lg mb-1">{example.title}</h3>
-                    <p className="text-white/80 text-sm">{example.description}</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
+              <div className="aspect-video overflow-hidden relative">
+                <img
+                  src="/lovable-uploads/a36e56b1-f6be-4e87-9584-287ecfb7727a.png"
+                  alt="AI Generated Beauty Product with Roses"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <h3 className="text-white font-semibold text-sm">Beauty & Lifestyle</h3>
+                  <p className="text-white/80 text-xs">Elegant product photography</p>
                 </div>
               </div>
-            ))}
+            </div>
+            <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
+              <div className="aspect-video overflow-hidden relative">
+                <img
+                  src="/lovable-uploads/e99826e4-702a-4c07-983d-6aeb6be90b88.png"
+                  alt="AI Generated 3D Letter B in Classroom"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <h3 className="text-white font-semibold text-sm">Education & 3D</h3>
+                  <p className="text-white/80 text-xs">Interactive learning content</p>
+                </div>
+              </div>
+            </div>
+            <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
+              <div className="aspect-video overflow-hidden relative">
+                <img
+                  src="/lovable-uploads/3c4f08c3-c637-4c5c-ae4d-4754bbbfefb3.png"
+                  alt="AI Generated Orange Slice Being Cut"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <h3 className="text-white font-semibold text-sm">Food & Cooking</h3>
+                  <p className="text-white/80 text-xs">Dynamic culinary visuals</p>
+                </div>
+              </div>
+            </div>
+            <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
+              <div className="aspect-video overflow-hidden relative">
+                <img
+                  src="/lovable-uploads/b90acee3-a058-4353-9056-1933a088a1ca.png"
+                  alt="AI Generated Fashion Photography"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <h3 className="text-white font-semibold text-sm">Fashion & Style</h3>
+                  <p className="text-white/80 text-xs">Professional modeling shots</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
