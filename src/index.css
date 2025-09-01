@@ -8,9 +8,9 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern AI brand colors - light blues and purples */
-    --background: 240 25% 98%;
-    --foreground: 234 16% 35%;
+    /* Modern AI brand colors - black background theme */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
     --card: 240 25% 99%;
     --card-foreground: 234 16% 35%;
