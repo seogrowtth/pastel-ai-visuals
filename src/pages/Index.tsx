@@ -367,7 +367,7 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 text-center">
+      <section className="py-16 text-center bg-gradient-to-br from-ai-blue/10 via-background to-ai-purple/10 border-t border-border">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Transform Your Images?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
