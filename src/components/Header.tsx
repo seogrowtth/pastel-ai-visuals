@@ -1,6 +1,7 @@
 import { HeroButton } from "@/components/ui/hero-button";
 import { Menu, X, Play } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,15 +11,18 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-button-gradient flex items-center justify-center">
               <Play className="w-4 h-4 text-white" />
             </div>
             <span className="text-xl font-bold text-foreground">Pixwith.ai</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
+            <Link to="/blog" className="text-muted-foreground hover:text-ai-blue transition-colors">
+              Blog
+            </Link>
             <a href="#features" className="text-muted-foreground hover:text-ai-blue transition-colors">
               Features
             </a>
@@ -57,6 +61,9 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-ai-blue/10">
             <nav className="flex flex-col gap-4">
+              <Link to="/blog" className="text-muted-foreground hover:text-ai-blue transition-colors">
+                Blog
+              </Link>
               <a href="#features" className="text-muted-foreground hover:text-ai-blue transition-colors">
                 Features
               </a>
