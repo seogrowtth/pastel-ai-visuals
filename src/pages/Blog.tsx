@@ -64,16 +64,12 @@ const Blog = () => {
                 className="group block"
               >
                 <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-ai-blue/30 transition-all duration-300 hover:shadow-card cursor-pointer">
-                  <div className="aspect-video bg-gradient-to-br from-ai-blue/20 to-ai-purple/20 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-ai-blue/10 to-ai-purple/10 group-hover:from-ai-blue/20 group-hover:to-ai-purple/20 transition-all duration-300" />
-                    <div className="absolute bottom-4 left-4">
+                  <div className="p-6">
+                    <div className="mb-4">
                       <span className="inline-block px-3 py-1 rounded-full bg-ai-blue/20 border border-ai-blue/30 text-xs font-medium text-ai-blue">
                         {post.category}
                       </span>
                     </div>
-                  </div>
-                  
-                  <div className="p-6">
                     <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
                       <div className="flex items-center gap-1">
                         <User className="w-3 h-3" />
