@@ -70,9 +70,11 @@ const Index = () => {
             </p>
             
             <div className="flex justify-center">
-              <HeroButton variant="primary" size="lg" className="group">
-                <Zap className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                Start Creating Videos
+              <HeroButton variant="primary" size="lg" className="group" asChild>
+                <a href="https://pixwith.ai/" target="_blank" rel="noopener noreferrer">
+                  <Zap className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                  Start Creating Videos
+                </a>
               </HeroButton>
             </div>
           </div>
@@ -332,8 +334,10 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join thousands of creators who are already using Pixwith.ai to bring their images to life.
           </p>
-          <HeroButton variant="primary" size="lg">
-            Start Your Free Trial
+          <HeroButton variant="primary" size="lg" asChild>
+            <a href="https://pixwith.ai/" target="_blank" rel="noopener noreferrer">
+              Start Your Free Trial
+            </a>
           </HeroButton>
         </div>
       </section>

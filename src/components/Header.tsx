@@ -39,8 +39,10 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <HeroButton variant="primary" size="default">
-              Start Creating
+            <HeroButton variant="primary" size="default" asChild>
+              <a href="https://pixwith.ai/" target="_blank" rel="noopener noreferrer">
+                Start Creating
+              </a>
             </HeroButton>
           </div>
 
@@ -76,8 +78,10 @@ const Header = () => {
               <a href="#faq" className="text-muted-foreground hover:text-ai-blue transition-colors">
                 FAQ
               </a>
-              <HeroButton variant="primary" size="default" className="mt-4 w-full">
-                Start Creating
+              <HeroButton variant="primary" size="default" className="mt-4 w-full" asChild>
+                <a href="https://pixwith.ai/" target="_blank" rel="noopener noreferrer">
+                  Start Creating
+                </a>
               </HeroButton>
             </nav>
           </div>
