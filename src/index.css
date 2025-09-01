@@ -8,26 +8,41 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Modern AI brand colors - light blues and purples */
+    --background: 240 25% 98%;
+    --foreground: 234 16% 35%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 25% 99%;
+    --card-foreground: 234 16% 35%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 25% 99%;
+    --popover-foreground: 234 16% 35%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 245 58% 64%;
+    --primary-foreground: 240 25% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 225 25% 95%;
+    --secondary-foreground: 234 16% 35%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 225 25% 95%;
+    --muted-foreground: 234 8% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 260 48% 88%;
+    --accent-foreground: 234 16% 35%;
+
+    /* AI brand specific colors */
+    --ai-blue: 216 89% 72%;
+    --ai-purple: 260 58% 78%;
+    --ai-gradient-start: 216 89% 72%;
+    --ai-gradient-end: 260 58% 78%;
+    
+    /* Hero section colors */
+    --hero-gradient: linear-gradient(135deg, hsl(var(--ai-gradient-start)), hsl(var(--ai-gradient-end)));
+    --hero-button: linear-gradient(135deg, hsl(var(--ai-blue)), hsl(var(--ai-purple)));
+    
+    /* Shadows and effects */
+    --shadow-glow: 0 8px 32px -8px hsl(var(--ai-blue) / 0.3);
+    --shadow-card: 0 4px 24px -4px hsl(var(--ai-blue) / 0.15);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
