@@ -25,49 +25,35 @@ import aiExample5 from "@/assets/ai-example-5.jpg";
 import aiExample6 from "@/assets/ai-example-6.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
-// Pixwith.ai Video Examples - Real use cases from their platform
+// Pixwith.ai Video Examples - Real videos from their platform
 const videoExamples = [
   { 
     id: 1, 
-    title: "YouTube Content Creation", 
-    description: "Transform static thumbnails into engaging video intros",
+    title: "YouTubers & Influencers", 
+    description: "Create viral-worthy videos for your channel with AI",
     category: "YouTube Creator",
-    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo1.mp4"
+    videoUrl: "https://pixwith.ai/v/youtubers.mp4"
   },
   { 
     id: 2, 
-    title: "Social Media Marketing", 
-    description: "Product photos become dynamic promotional videos",
-    category: "Brand Marketing",
-    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo2.mp4"
+    title: "Content Creator", 
+    description: "Transform static content into dynamic visuals for social media",
+    category: "Content Creator",
+    videoUrl: "https://pixwith.ai/v/content_creator.mp4"
   },
   { 
     id: 3, 
-    title: "Instagram Reels", 
-    description: "Portrait photos with natural motion effects",
-    category: "Content Creator",
-    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo3.mp4"
+    title: "Brand Marketing", 
+    description: "Professional marketing videos on a budget-friendly scale",
+    category: "Brand Marketing",
+    videoUrl: "https://pixwith.ai/v/brand_marketing.mp4"
   },
   { 
     id: 4, 
-    title: "Educational Content", 
-    description: "Static diagrams animated for better learning",
+    title: "Education & Training", 
+    description: "Engaging learning content made simple with AI animation",
     category: "Education",
-    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo4.mp4"
-  },
-  { 
-    id: 5, 
-    title: "Product Showcase", 
-    description: "E-commerce photos with professional motion",
-    category: "Commercial",
-    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo5.mp4"
-  },
-  { 
-    id: 6, 
-    title: "Creative Portfolio", 
-    description: "Artistic images brought to life with AI",
-    category: "Creative Arts",
-    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo6.mp4"
+    videoUrl: "https://pixwith.ai/v/education_training.mp4"
   }
 ];
 
@@ -125,7 +111,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-foreground mb-4">See Pixwith.ai Video Examples</h2>
             <p className="text-muted-foreground text-lg">Real video transformations from the Pixwith.ai platform</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {videoExamples.map((example) => (
               <div 
                 key={example.id} 
