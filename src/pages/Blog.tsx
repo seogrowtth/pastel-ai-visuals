@@ -4,66 +4,7 @@ import { HeroButton } from "@/components/ui/hero-button";
 
 const Blog = () => {
   const blogPosts = [
-    {
-      id: 1,
-      title: "The Future of AI Video Generation: Trends to Watch in 2025",
-      excerpt: "Explore the latest developments in AI video technology and what they mean for content creators, businesses, and the entertainment industry.",
-      author: "Sarah Chen",
-      date: "January 15, 2025",
-      readTime: "8 min read",
-      category: "Technology",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 2,
-      title: "From Static to Dynamic: Mastering Image-to-Video AI",
-      excerpt: "Learn the best practices for creating compelling video content from static images using advanced AI techniques and motion styles.",
-      author: "Marcus Rodriguez",
-      date: "January 12, 2025",
-      readTime: "6 min read",
-      category: "Tutorial",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 3,
-      title: "AI Video Generation for Marketing: Case Studies & ROI",
-      excerpt: "Discover how leading brands are leveraging AI video generation to create engaging marketing content while reducing production costs.",
-      author: "Emily Watson",
-      date: "January 10, 2025",
-      readTime: "10 min read",
-      category: "Business",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 4,
-      title: "Understanding Motion Styles in AI Video Generation",
-      excerpt: "A comprehensive guide to different motion styles available in AI video tools and how to choose the right one for your project.",
-      author: "David Kim",
-      date: "January 8, 2025",
-      readTime: "7 min read",
-      category: "Guide",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 5,
-      title: "Ethics and AI Video Generation: Best Practices",
-      excerpt: "Navigate the ethical considerations of AI-generated video content, including copyright, consent, and responsible usage guidelines.",
-      author: "Dr. Lisa Thompson",
-      date: "January 5, 2025",
-      readTime: "12 min read",
-      category: "Ethics",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 6,
-      title: "Technical Deep Dive: How AI Transforms Images into Videos",
-      excerpt: "Explore the underlying technology that powers image-to-video AI, from neural networks to temporal consistency algorithms.",
-      author: "Alex Patel",
-      date: "January 3, 2025",
-      readTime: "15 min read",
-      category: "Technology",
-      image: "/api/placeholder/600/400"
-    }
+    // Blog posts will be added here with your custom titles
   ];
 
   const categories = ["All", "Technology", "Tutorial", "Business", "Guide", "Ethics"];
