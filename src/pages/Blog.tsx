@@ -56,7 +56,7 @@ const Blog = () => {
       {/* Blog Posts Grid */}
       <section className="px-4 pb-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {blogPosts.map((post) => (
               <Link
                 key={post.id}
