@@ -25,6 +25,12 @@ import aiExample5 from "@/assets/ai-example-5.jpg";
 import aiExample6 from "@/assets/ai-example-6.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
+// Import video thumbnails
+import youtubeThumbnail from "@/assets/youtube-thumbnail.jpg";
+import contentCreatorThumbnail from "@/assets/content-creator-thumbnail.jpg";
+import brandMarketingThumbnail from "@/assets/brand-marketing-thumbnail.jpg";
+import educationThumbnail from "@/assets/education-thumbnail.jpg";
+
 // Pixwith.ai Video Examples - Real videos from their platform
 const videoExamples = [
   { 
@@ -32,28 +38,32 @@ const videoExamples = [
     title: "YouTubers & Influencers", 
     description: "Create viral-worthy videos for your channel with AI",
     category: "YouTube Creator",
-    videoUrl: "https://pixwith.ai/v/youtubers.mp4"
+    videoUrl: "https://pixwith.ai/v/youtubers.mp4",
+    thumbnail: youtubeThumbnail
   },
   { 
     id: 2, 
     title: "Content Creator", 
     description: "Transform static content into dynamic visuals for social media",
     category: "Content Creator",
-    videoUrl: "https://pixwith.ai/v/content_creator.mp4"
+    videoUrl: "https://pixwith.ai/v/content_creator.mp4",
+    thumbnail: contentCreatorThumbnail
   },
   { 
     id: 3, 
     title: "Brand Marketing", 
     description: "Professional marketing videos on a budget-friendly scale",
     category: "Brand Marketing",
-    videoUrl: "https://pixwith.ai/v/brand_marketing.mp4"
+    videoUrl: "https://pixwith.ai/v/brand_marketing.mp4",
+    thumbnail: brandMarketingThumbnail
   },
   { 
     id: 4, 
     title: "Education & Training", 
     description: "Engaging learning content made simple with AI animation",
     category: "Education",
-    videoUrl: "https://pixwith.ai/v/education_training.mp4"
+    videoUrl: "https://pixwith.ai/v/education_training.mp4",
+    thumbnail: educationThumbnail
   }
 ];
 
@@ -120,10 +130,9 @@ const Index = () => {
                 <div className="aspect-video overflow-hidden relative">
                   <video
                     className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
+                    poster={example.thumbnail}
+                    controls
+                    preload="metadata"
                   >
                     <source src={example.videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
