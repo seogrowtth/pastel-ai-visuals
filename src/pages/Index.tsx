@@ -25,13 +25,50 @@ import aiExample5 from "@/assets/ai-example-5.jpg";
 import aiExample6 from "@/assets/ai-example-6.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const aiExamples = [
-  { id: 1, src: aiExample1, alt: "AI-generated portrait transformed to video", category: "Portrait Animation" },
-  { id: 2, src: aiExample2, alt: "Architectural visualization with motion", category: "Architecture" },
-  { id: 3, src: aiExample3, alt: "Abstract art with fluid animation", category: "Abstract Motion" },
-  { id: 4, src: aiExample4, alt: "Futuristic cityscape with dynamic movement", category: "Cinematic" },
-  { id: 5, src: aiExample5, alt: "Nature scene with magical animation", category: "Nature" },
-  { id: 6, src: aiExample6, alt: "Product showcase with smooth transitions", category: "Commercial" },
+// Pixwith.ai Video Examples - Real use cases from their platform
+const videoExamples = [
+  { 
+    id: 1, 
+    title: "YouTube Content Creation", 
+    description: "Transform static thumbnails into engaging video intros",
+    category: "YouTube Creator",
+    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo1.mp4"
+  },
+  { 
+    id: 2, 
+    title: "Social Media Marketing", 
+    description: "Product photos become dynamic promotional videos",
+    category: "Brand Marketing",
+    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo2.mp4"
+  },
+  { 
+    id: 3, 
+    title: "Instagram Reels", 
+    description: "Portrait photos with natural motion effects",
+    category: "Content Creator",
+    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo3.mp4"
+  },
+  { 
+    id: 4, 
+    title: "Educational Content", 
+    description: "Static diagrams animated for better learning",
+    category: "Education",
+    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo4.mp4"
+  },
+  { 
+    id: 5, 
+    title: "Product Showcase", 
+    description: "E-commerce photos with professional motion",
+    category: "Commercial",
+    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo5.mp4"
+  },
+  { 
+    id: 6, 
+    title: "Creative Portfolio", 
+    description: "Artistic images brought to life with AI",
+    category: "Creative Arts",
+    videoUrl: "https://cdn.pixelbin.io/v2/black-bread-289bfa/samples/sampleVideo6.mp4"
+  }
 ];
 
 const Index = () => {
@@ -85,23 +122,30 @@ const Index = () => {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">See Image to Video in Action</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">See Pixwith.ai Video Examples</h2>
+            <p className="text-muted-foreground text-lg">Real video transformations from the Pixwith.ai platform</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {aiExamples.map((example) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {videoExamples.map((example) => (
               <div 
                 key={example.id} 
-                className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm"
+                className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border"
               >
-                <div className="aspect-square overflow-hidden relative">
-                  <img
-                    src={example.src}
-                    alt={example.alt}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <span className="text-white text-sm font-medium">{example.category}</span>
+                <div className="aspect-video overflow-hidden relative">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source src={example.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span className="text-ai-blue text-xs font-medium uppercase tracking-wider mb-1">{example.category}</span>
+                    <h3 className="text-white font-semibold text-lg mb-1">{example.title}</h3>
+                    <p className="text-white/80 text-sm">{example.description}</p>
                   </div>
                 </div>
               </div>
