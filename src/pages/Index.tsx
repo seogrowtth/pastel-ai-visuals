@@ -24,7 +24,6 @@ import aiExample4 from "@/assets/ai-example-4.jpg";
 import aiExample5 from "@/assets/ai-example-5.jpg";
 import aiExample6 from "@/assets/ai-example-6.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
-import aiHolographicDisplay from "@/assets/ai-holographic-display.jpg";
 
 const Index = () => {
   return (
@@ -82,22 +81,22 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
-              <div className="aspect-video overflow-hidden relative">
+              <div className="aspect-square overflow-hidden relative">
                 <img
-                  src={aiHolographicDisplay}
-                  alt="AI Holographic Display Video Transformation"
+                  src="/lovable-uploads/a580120b-b2a1-41b4-bfa4-71d424b1636b.png"
+                  alt="AI Generated Beauty Product with Roses"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <h3 className="text-white font-semibold text-sm">AI Technology</h3>
-                  <p className="text-white/80 text-xs">Futuristic video transformation</p>
+                  <h3 className="text-white font-semibold text-sm">Beauty & Lifestyle</h3>
+                  <p className="text-white/80 text-xs">Elegant product photography</p>
                 </div>
               </div>
             </div>
             <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
-              <div className="aspect-video overflow-hidden relative">
+              <div className="aspect-square overflow-hidden relative">
                 <img
-                  src="/lovable-uploads/e99826e4-702a-4c07-983d-6aeb6be90b88.png"
+                  src="/lovable-uploads/79e44702-268e-466b-9f94-588ed9bca666.png"
                   alt="AI Generated 3D Letter B in Classroom"
                   className="w-full h-full object-cover"
                 />
@@ -108,9 +107,9 @@ const Index = () => {
               </div>
             </div>
             <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
-              <div className="aspect-video overflow-hidden relative">
+              <div className="aspect-square overflow-hidden relative">
                 <img
-                  src="/lovable-uploads/3c4f08c3-c637-4c5c-ae4d-4754bbbfefb3.png"
+                  src="/lovable-uploads/54b13250-ef7b-4b39-86d6-498995e5602e.png"
                   alt="AI Generated Orange Slice Being Cut"
                   className="w-full h-full object-cover"
                 />
@@ -121,9 +120,9 @@ const Index = () => {
               </div>
             </div>
             <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
-              <div className="aspect-video overflow-hidden relative">
+              <div className="aspect-square overflow-hidden relative">
                 <img
-                  src="/lovable-uploads/b90acee3-a058-4353-9056-1933a088a1ca.png"
+                  src="/lovable-uploads/b4d2733a-8764-4520-89f8-af1b0403939f.png"
                   alt="AI Generated Fashion Photography"
                   className="w-full h-full object-cover"
                 />
