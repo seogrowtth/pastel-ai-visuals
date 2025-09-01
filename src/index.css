@@ -8,48 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern AI brand colors - black background theme */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /* Premium AI brand colors - refined neon theme */
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
 
-    --card: 240 25% 99%;
-    --card-foreground: 234 16% 35%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 240 25% 99%;
-    --popover-foreground: 234 16% 35%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 180 100% 50%;
+    --primary: 186 100% 60%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 225 25% 95%;
-    --secondary-foreground: 234 16% 35%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 225 25% 95%;
-    --muted-foreground: 234 8% 55%;
+    --muted: 0 0% 6%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 320 100% 50%;
+    --accent: 315 100% 60%;
     --accent-foreground: 0 0% 100%;
 
-    /* AI brand specific colors - Pixwith.ai inspired neon theme */
-    --ai-blue: 180 100% 50%;
-    --ai-purple: 320 100% 50%;
-    --ai-gradient-start: 180 100% 50%;
-    --ai-gradient-end: 320 100% 50%;
+    /* Premium AI brand specific colors */
+    --ai-blue: 186 100% 60%;
+    --ai-purple: 315 100% 60%;
+    --ai-cyan: 180 100% 70%;
+    --ai-magenta: 320 100% 70%;
+    --ai-gradient-start: 186 100% 60%;
+    --ai-gradient-end: 315 100% 60%;
     
-    /* Hero section colors */
+    /* Premium gradients and effects */
     --hero-gradient: linear-gradient(135deg, hsl(var(--ai-gradient-start)), hsl(var(--ai-gradient-end)));
     --hero-button: linear-gradient(135deg, hsl(var(--ai-blue)), hsl(var(--ai-purple)));
+    --text-gradient: linear-gradient(135deg, hsl(var(--ai-cyan)), hsl(var(--ai-magenta)));
+    --border-gradient: linear-gradient(135deg, hsl(var(--ai-blue) / 0.3), hsl(var(--ai-purple) / 0.3));
     
-    /* Shadows and effects */
-    --shadow-glow: 0 8px 32px -8px hsl(var(--ai-blue) / 0.3);
-    --shadow-card: 0 4px 24px -4px hsl(var(--ai-blue) / 0.15);
+    /* Premium shadows and glows */
+    --shadow-glow: 0 0 40px hsl(var(--ai-blue) / 0.4), 0 0 80px hsl(var(--ai-purple) / 0.2);
+    --shadow-card: 0 8px 32px -8px hsl(var(--ai-blue) / 0.25);
+    --shadow-neon: 0 0 20px hsl(var(--ai-blue) / 0.5);
+    --shadow-text: 0 0 30px hsl(var(--ai-blue) / 0.6);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 186 100% 60%;
 
     --radius: 0.5rem;
 
@@ -115,6 +121,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
 }

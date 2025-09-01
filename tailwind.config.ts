@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'display': ['Space Grotesk', 'Inter', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -71,11 +76,15 @@ export default {
 			},
 			backgroundImage: {
 				'hero-gradient': 'var(--hero-gradient)',
-				'button-gradient': 'var(--hero-button)'
+				'button-gradient': 'var(--hero-button)',
+				'text-gradient': 'var(--text-gradient)',
+				'border-gradient': 'var(--border-gradient)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
-				'card': 'var(--shadow-card)'
+				'card': 'var(--shadow-card)',
+				'neon': 'var(--shadow-neon)',
+				'text': 'var(--shadow-text)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
