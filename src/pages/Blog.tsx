@@ -1,8 +1,19 @@
 import Header from "@/components/Header";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
+  // Helper function to create URL slug from title
+  const createSlug = (title: string) => {
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9 -]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .trim();
+  };
+
   const blogPosts = [
     {
       id: 1,
@@ -158,49 +169,52 @@ const Blog = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article
+              <Link
                 key={post.id}
-                className="group bg-card border border-border rounded-lg overflow-hidden hover:border-ai-blue/30 transition-all duration-300 hover:shadow-card"
+                to={`/blog/${createSlug(post.title)}`}
+                className="group block"
               >
-                <div className="aspect-video bg-gradient-to-br from-ai-blue/20 to-ai-purple/20 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-ai-blue/10 to-ai-purple/10 group-hover:from-ai-blue/20 group-hover:to-ai-purple/20 transition-all duration-300" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="inline-block px-3 py-1 rounded-full bg-ai-blue/20 border border-ai-blue/30 text-xs font-medium text-ai-blue">
-                      {post.category}
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
-                    <div className="flex items-center gap-1">
-                      <User className="w-3 h-3" />
-                      {post.author}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {post.date}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {post.readTime}
+                <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-ai-blue/30 transition-all duration-300 hover:shadow-card cursor-pointer">
+                  <div className="aspect-video bg-gradient-to-br from-ai-blue/20 to-ai-purple/20 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-ai-blue/10 to-ai-purple/10 group-hover:from-ai-blue/20 group-hover:to-ai-purple/20 transition-all duration-300" />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="inline-block px-3 py-1 rounded-full bg-ai-blue/20 border border-ai-blue/30 text-xs font-medium text-ai-blue">
+                        {post.category}
+                      </span>
                     </div>
                   </div>
                   
-                  <h3 className="font-display font-semibold text-lg text-foreground mb-3 group-hover:text-ai-blue transition-colors">
-                    {post.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  
-                  <button className="inline-flex items-center gap-2 text-ai-blue hover:text-ai-purple text-sm font-medium group/btn">
-                    Read More
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </article>
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
+                      <div className="flex items-center gap-1">
+                        <User className="w-3 h-3" />
+                        {post.author}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-3 h-3" />
+                        {post.date}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-3 h-3" />
+                        {post.readTime}
+                      </div>
+                    </div>
+                    
+                    <h3 className="font-display font-semibold text-lg text-foreground mb-3 group-hover:text-ai-blue transition-colors">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="inline-flex items-center gap-2 text-ai-blue group-hover:text-ai-purple text-sm font-medium group/btn">
+                      Read More
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
