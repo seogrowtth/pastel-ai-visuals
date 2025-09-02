@@ -169,18 +169,65 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Introducing Pixwith.ai's Image to Video AI */}
+            {/* Features Section */}
             <div className="mb-16" id="features">
               <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
                 <Wand2 className="w-8 h-8 text-ai-blue" />
-                Introducing Pixwith.ai&apos;s Image to Video AI
+                Powerful Features
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Pixwith.ai represents the next generation of Image to Video AI technology, combining state-of-the-art neural networks with intuitive user experience design. Our platform utilizes advanced diffusion models and temporal consistency algorithms to ensure that generated videos maintain high visual fidelity while producing smooth, realistic motion.
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Pixwith.ai combines cutting-edge AI technology with intuitive design to deliver professional-grade video generation from any static image.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                What sets Pixwith.ai apart is our focus on preserving the artistic integrity of the original image while adding meaningful motion that enhances the viewer&apos;s experience. Our AI understands context, depth, and natural physics to create animations that feel authentic and purposeful rather than generic or artificial.
-              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Zap className="w-8 h-8 text-ai-blue" />
+                    <h3 className="text-xl font-semibold text-foreground">Lightning Fast Processing</h3>
+                  </div>
+                  <p className="text-muted-foreground">Generate high-quality videos in just 30-60 seconds using our optimized AI infrastructure and cloud processing power.</p>
+                </Card>
+
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20 hover:border-ai-purple/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <ImageIcon className="w-8 h-8 text-ai-purple" />
+                    <h3 className="text-xl font-semibold text-foreground">4K Quality Output</h3>
+                  </div>
+                  <p className="text-muted-foreground">Export your videos in stunning 4K resolution with crystal-clear details and professional-grade quality for any platform.</p>
+                </Card>
+
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Palette className="w-8 h-8 text-ai-blue" />
+                    <h3 className="text-xl font-semibold text-foreground">Multiple Motion Styles</h3>
+                  </div>
+                  <p className="text-muted-foreground">Choose from cinematic, ambient, parallax, zoom, and custom motion styles to match your creative vision.</p>
+                </Card>
+
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20 hover:border-ai-purple/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Shield className="w-8 h-8 text-ai-purple" />
+                    <h3 className="text-xl font-semibold text-foreground">Secure & Private</h3>
+                  </div>
+                  <p className="text-muted-foreground">Your images are processed securely and automatically deleted after 24 hours. Full privacy protection guaranteed.</p>
+                </Card>
+
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Users className="w-8 h-8 text-ai-blue" />
+                    <h3 className="text-xl font-semibold text-foreground">Batch Processing</h3>
+                  </div>
+                  <p className="text-muted-foreground">Upload and process multiple images simultaneously to save time and boost your productivity workflow.</p>
+                </Card>
+
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20 hover:border-ai-purple/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Video className="w-8 h-8 text-ai-purple" />
+                    <h3 className="text-xl font-semibold text-foreground">Multiple Formats</h3>
+                  </div>
+                  <p className="text-muted-foreground">Export in MP4, WebM, MOV, and GIF formats optimized for social media, web, and professional use.</p>
+                </Card>
+              </div>
             </div>
 
             {/* How Pixwith.ai Works */}
@@ -316,19 +363,126 @@ const Index = () => {
 
             {/* FAQ */}
             <div className="mb-16" id="faq">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">How long does it take to generate a video?</h3>
-                  <p className="text-muted-foreground">Most videos are generated within 30-60 seconds, depending on the complexity of the image and chosen motion style.</p>
+              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+                <CheckCircle className="w-8 h-8 text-ai-blue" />
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-ai-blue" />
+                      How long does it take to generate a video?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Most videos are generated within 30-60 seconds, depending on the complexity of the image and chosen motion style. Our advanced cloud infrastructure ensures fast processing even during peak usage.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <ImageIcon className="w-5 h-5 text-ai-purple" />
+                      What image formats are supported?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">We support JPEG, PNG, WebP, TIFF, and BMP formats. Maximum file size is 50MB with recommended dimensions of 1024x1024 pixels or higher for best results.</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">What image formats are supported?</h3>
-                  <p className="text-muted-foreground">We support JPEG, PNG, WebP, and most common image formats. Maximum file size is 50MB.</p>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Shield className="w-5 h-5 text-ai-blue" />
+                      Can I use generated videos commercially?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Yes, all generated videos can be used for commercial purposes without additional licensing fees. You retain full rights to your original content and the AI-generated videos.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Video className="w-5 h-5 text-ai-purple" />
+                      What video formats can I export?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Export options include MP4 (H.264), WebM, MOV, and animated GIF formats. All formats are optimized for different platforms including social media, web, and professional use.</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Can I use generated videos commercially?</h3>
-                  <p className="text-muted-foreground">Yes, all generated videos can be used for commercial purposes. You retain full rights to your content.</p>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Palette className="w-5 h-5 text-ai-blue" />
+                      How many motion styles are available?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">We offer 8+ motion styles including Cinematic, Ambient, Parallax, Zoom, Pan, Rotate, and Custom options. Each style can be fine-tuned with intensity and direction controls.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Users className="w-5 h-5 text-ai-purple" />
+                      Is batch processing available?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Yes, Professional and Enterprise plans include batch processing capabilities. Upload up to 50 images simultaneously and process them with the same or different motion styles.</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <DollarSign className="w-5 h-5 text-ai-blue" />
+                      Do you offer a free trial?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Yes! New users get 10 free video generations to test our platform. No credit card required for the trial, and you can upgrade to a paid plan anytime.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Zap className="w-5 h-5 text-ai-purple" />
+                      What's the maximum video resolution?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Professional plans support up to 4K (3840x2160) video output. Starter plans include HD (1920x1080) resolution, which is perfect for most social media and web applications.</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Shield className="w-5 h-5 text-ai-blue" />
+                      How secure is my data?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">All uploads are encrypted in transit and at rest. Images are automatically deleted after 24 hours, and we never use your content to train our AI models or share it with third parties.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Play className="w-5 h-5 text-ai-purple" />
+                      Can I customize video length?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Generated videos are typically 3-5 seconds long, which is optimal for social media. Enterprise plans offer custom video lengths up to 15 seconds with loop options.</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Sparkles className="w-5 h-5 text-ai-blue" />
+                      What makes your AI better than competitors?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Our proprietary temporal consistency algorithms ensure smooth, realistic motion while preserving image quality. We focus on natural movement patterns rather than generic effects.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Wand2 className="w-5 h-5 text-ai-purple" />
+                      Do you have API access?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Yes, Enterprise plans include full API access with comprehensive documentation, webhooks, and SDKs for popular programming languages. Perfect for integrating into existing workflows.</p>
+                  </div>
+                </div>
+
+                <div className="text-center mt-12">
+                  <p className="text-muted-foreground text-lg mb-6">Still have questions?</p>
+                  <HeroButton variant="secondary" size="default" asChild>
+                    <a href="mailto:support@pixwith.ai">
+                      Contact Support
+                    </a>
+                  </HeroButton>
                 </div>
               </div>
             </div>
