@@ -227,6 +227,30 @@ const Index = () => {
                   </div>
                   <p className="text-muted-foreground">Export in MP4, WebM, MOV, and GIF formats optimized for social media, web, and professional use.</p>
                 </Card>
+
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Sparkles className="w-8 h-8 text-ai-blue" />
+                    <h3 className="text-xl font-semibold text-foreground">Smart Object Detection</h3>
+                  </div>
+                  <p className="text-muted-foreground">Advanced AI identifies objects, people, and backgrounds to create natural, contextually appropriate motion effects.</p>
+                </Card>
+
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20 hover:border-ai-purple/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Clock className="w-8 h-8 text-ai-purple" />
+                    <h3 className="text-xl font-semibold text-foreground">Real-time Preview</h3>
+                  </div>
+                  <p className="text-muted-foreground">See motion effects in real-time before generating the final video, with instant preview and adjustment controls.</p>
+                </Card>
+
+                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Play className="w-8 h-8 text-ai-blue" />
+                    <h3 className="text-xl font-semibold text-foreground">Loop & Duration Control</h3>
+                  </div>
+                  <p className="text-muted-foreground">Customize video length from 3-15 seconds with seamless looping options for perfect social media content.</p>
+                </Card>
               </div>
             </div>
 
@@ -473,6 +497,78 @@ const Index = () => {
                       Do you have API access?
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">Yes, Enterprise plans include full API access with comprehensive documentation, webhooks, and SDKs for popular programming languages. Perfect for integrating into existing workflows.</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-ai-blue" />
+                      What are the system requirements?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Pixwith.ai is web-based and works on any modern browser. No special hardware or software installation required. Just a stable internet connection.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Video className="w-5 h-5 text-ai-purple" />
+                      Can I add music or sound effects?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Currently, we focus on visual animation. For audio integration, you can use our generated videos in video editing software to add your preferred music or sound effects.</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Users className="w-5 h-5 text-ai-blue" />
+                      Is there a mobile app available?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Our web platform is fully responsive and works great on mobile devices. A dedicated mobile app is in development and will be available in Q2 2025.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Palette className="w-5 h-5 text-ai-purple" />
+                      Can I edit the generated video further?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Yes! Our generated videos are compatible with all major video editing software. You can further customize colors, add text overlays, or combine multiple videos.</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Shield className="w-5 h-5 text-ai-blue" />
+                      What if I'm not satisfied with the result?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">We offer unlimited re-generations within your plan limits. Try different motion styles and settings until you get the perfect result. Our support team is also here to help.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-ai-purple" />
+                      Do you offer volume discounts?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Yes! Enterprise plans include volume pricing. Contact our sales team for custom pricing based on your usage requirements and we'll create a tailored solution.</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <Zap className="w-5 h-5 text-ai-blue" />
+                      How does the AI training work?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Our AI is trained on millions of video sequences and motion patterns. We use advanced neural networks to understand natural movement and apply it to static images while preserving quality.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <ImageIcon className="w-5 h-5 text-ai-purple" />
+                      Can I use AI-generated images?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">Absolutely! Our platform works perfectly with AI-generated images from Midjourney, DALL-E, Stable Diffusion, or any other image generation tool. Just upload and animate!</p>
                   </div>
                 </div>
 
