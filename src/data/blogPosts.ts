@@ -543,3 +543,16 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export const findPostBySlug = (slug: string) => blogPosts.find((p) => p.slug === slug);
+
+/**
+ * Gets all existing slugs for uniqueness checking
+ */
+export const getAllSlugs = () => blogPosts.map(post => post.slug);
+
+/**
+ * Generates categories from blog posts
+ */
+export const getCategories = () => {
+  const categories = Array.from(new Set(blogPosts.map(post => post.category)));
+  return categories.sort();
+};
