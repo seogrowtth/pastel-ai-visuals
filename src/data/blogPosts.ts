@@ -1,3 +1,5 @@
+import { slugify } from '@/utils/slugify';
+
 export type BlogPost = {
   id: number;
   slug: string;
@@ -13,7 +15,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    slug: "best-ai-tools-to-animate-images-into-videos-2025-guide",
+    slug: "best-ai-tools-animate-images-videos-2025",
     title: "Best AI Tools to Animate Images into Videos (2025 Guide)",
     excerpt:
       "Discover the top AI-powered tools that transform static images into dynamic videos. From beginner-friendly options to professional-grade solutions, find the perfect tool for your creative needs.",
@@ -49,7 +51,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 2,
-    slug: "how-image-to-video-ai-is-transforming-social-media-marketing",
+    slug: "image-video-ai-transforming-social-media-marketing",
     title: "How Image to Video AI is Transforming Social Media Marketing",
     excerpt:
       "Learn how brands are revolutionizing their social media presence with AI-generated video content. Explore case studies, best practices, and ROI metrics that matter.",
@@ -91,7 +93,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
-    slug: "step-by-step-how-to-turn-a-still-photo-into-a-cinematic-video",
+    slug: "turn-photo-into-cinematic-video-guide",
     title: "Step-by-Step: How to Turn a Still Photo into a Cinematic Video",
     excerpt:
       "Master the art of creating cinematic videos from static images. This comprehensive tutorial covers everything from preparation to final export with professional tips.",
@@ -142,7 +144,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    slug: "top-5-motion-styles-every-creator-should-try-with-ai-video-generators",
+    slug: "top-motion-styles-ai-video-generators",
     title: "Top 5 Motion Styles Every Creator Should Try with AI Video Generators",
     excerpt:
       "Explore the most popular and effective motion styles in AI video generation. Learn when and how to use each style to maximize visual impact and engagement.",
@@ -189,7 +191,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 5,
-    slug: "why-short-form-video-beats-static-images-for-engagement",
+    slug: "video-vs-static-images-engagement",
     title: "Why Short-Form Video Beats Static Images for Engagement",
     excerpt:
       "Dive deep into the psychology and data behind why video content outperforms static images across all platforms. Discover actionable strategies to boost your engagement rates.",
@@ -238,7 +240,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 6,
-    slug: "image-to-video-ai-vs-traditional-animation-which-is-right-for-you",
+    slug: "ai-vs-traditional-animation-comparison",
     title: "Image to Video AI vs Traditional Animation: Which is Right for You?",
     excerpt:
       "Compare the pros and cons of AI-powered image animation versus traditional animation methods. Make informed decisions based on budget, timeline, and quality requirements.",
