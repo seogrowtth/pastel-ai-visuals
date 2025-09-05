@@ -21,14 +21,14 @@ const Blog = () => {
           </div>
           
           <h1 className="text-4xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
-            AI Video Generation
+            Pixwith
             <span className="block bg-text-gradient bg-clip-text text-transparent">
-              Blog & Insights
+              AI Creator Hub
             </span>
           </h1>
           
           <p className="text-lg lg:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Stay updated with the latest trends, tutorials, and insights in AI video generation technology.
+            Master AI video creation with Pixwith tutorials, tools, and creative strategies.
           </p>
         </div>
       </section>
@@ -109,10 +109,10 @@ const Blog = () => {
       <section className="px-4 py-20 bg-gradient-to-r from-ai-blue/5 to-ai-purple/5 border-t border-border">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground mb-6">
-            Stay Updated with AI Video Trends
+            Pixwith Creator Updates
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get the latest insights, tutorials, and industry news delivered to your inbox weekly.
+            Exclusive Pixwith tips, advanced techniques, and creator success stories weekly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input
