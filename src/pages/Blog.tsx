@@ -2,12 +2,11 @@ import Header from "@/components/Header";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import { Link } from "react-router-dom";
-import { blogPosts, titleToUrl } from "@/data/blogPosts";
+import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
 
   const categories = ["All", "Tools", "Marketing", "Tutorial", "Creative", "Strategy", "Comparison", "Future", "Review"];
-  console.log('Blog page render, posts:', blogPosts.length);
 
   return (
     <div className="min-h-screen bg-background">
@@ -22,14 +21,14 @@ const Blog = () => {
           </div>
           
           <h1 className="text-4xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
-            Pixwith
+            AI Video Generation
             <span className="block bg-text-gradient bg-clip-text text-transparent">
-              AI Creator Hub
+              Blog & Insights
             </span>
           </h1>
           
           <p className="text-lg lg:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Master AI video creation with Pixwith tutorials, tools, and creative strategies.
+            Stay updated with the latest trends, tutorials, and insights in AI video generation technology.
           </p>
         </div>
       </section>
@@ -61,7 +60,7 @@ const Blog = () => {
             {blogPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${titleToUrl(post.title)}`}
+                to={`/blog/${post.slug}`}
                 className="group block"
               >
                 <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-ai-blue/30 transition-all duration-300 hover:shadow-card cursor-pointer">
@@ -110,10 +109,10 @@ const Blog = () => {
       <section className="px-4 py-20 bg-gradient-to-r from-ai-blue/5 to-ai-purple/5 border-t border-border">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground mb-6">
-            Pixwith Creator Updates
+            Stay Updated with AI Video Trends
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Exclusive Pixwith tips, advanced techniques, and creator success stories weekly.
+            Get the latest insights, tutorials, and industry news delivered to your inbox weekly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input
