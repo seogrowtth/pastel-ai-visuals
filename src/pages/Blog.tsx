@@ -7,6 +7,7 @@ import { blogPosts, titleToUrl } from "@/data/blogPosts";
 const Blog = () => {
 
   const categories = ["All", "Tools", "Marketing", "Tutorial", "Creative", "Strategy", "Comparison", "Future", "Review"];
+  console.log('Blog page render, posts:', blogPosts.length);
 
   return (
     <div className="min-h-screen bg-background">
