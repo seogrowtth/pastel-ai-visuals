@@ -1,5 +1,7 @@
 import { HeroButton } from "@/components/ui/hero-button";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import { 
   Sparkles, 
@@ -10,626 +12,568 @@ import {
   Palette, 
   Wand2,
   CheckCircle,
-  DollarSign,
+  ArrowRight,
   Users,
   Video,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Star,
+  Layers,
+  Gauge,
+  Globe,
+  DollarSign
 } from "lucide-react";
-
-// Import AI example images
-import aiExample1 from "@/assets/ai-example-1.jpg";
-import aiExample2 from "@/assets/ai-example-2.jpg";
-import aiExample3 from "@/assets/ai-example-3.jpg";
-import aiExample4 from "@/assets/ai-example-4.jpg";
-import aiExample5 from "@/assets/ai-example-5.jpg";
-import aiExample6 from "@/assets/ai-example-6.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-hero-gradient">
+    <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16">
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="relative container mx-auto px-4 py-20 lg:py-32 text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex justify-center mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ai-blue/10 border border-ai-blue/20 backdrop-blur-sm">
-                <Play className="w-4 h-4 text-ai-blue" />
-                <span className="text-sm font-medium text-foreground">Revolutionary Image to Video AI</span>
-              </div>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight">
-              Transform Static Images into
-              <span className="block text-white">
-                Dynamic Video Content
-              </span>
-            </h1>
-            
-            <p className="text-lg lg:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-              Bring your images to life with Pixwith.ai&apos;s cutting-edge Image to Video AI technology. Create stunning animations from any static image in seconds.
-            </p>
-            
-            <div className="flex justify-center">
-              <HeroButton variant="primary" size="lg" className="group" asChild>
-                <a href="https://pixwith.ai/" target="_blank" rel="noopener noreferrer">
-                  <Zap className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                  Start Creating Videos
-                </a>
-              </HeroButton>
-            </div>
-          </div>
+      <section className="relative overflow-hidden pt-16 bg-gradient-to-br from-ai-blue/5 via-background to-ai-purple/5">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-ai-blue/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-ai-purple/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-      </section>
-
-      {/* AI Generated Examples Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-ai-blue/5 via-background to-ai-purple/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">AI Generated Examples</h2>
-            <p className="text-muted-foreground text-lg">Stunning AI-generated images showcasing the power of artificial intelligence</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
-              <div className="aspect-square overflow-hidden relative">
-                <img
-                  src="/lovable-uploads/a580120b-b2a1-41b4-bfa4-71d424b1636b.png"
-                  alt="AI Generated Beauty Product with Roses"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <h3 className="text-white font-semibold text-sm">Beauty & Lifestyle</h3>
-                  <p className="text-white/80 text-xs">Elegant product photography</p>
-                </div>
-              </div>
-            </div>
-            <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
-              <div className="aspect-square overflow-hidden relative">
-                <img
-                  src="/lovable-uploads/79e44702-268e-466b-9f94-588ed9bca666.png"
-                  alt="AI Generated 3D Letter B in Classroom"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <h3 className="text-white font-semibold text-sm">Education & 3D</h3>
-                  <p className="text-white/80 text-xs">Interactive learning content</p>
-                </div>
-              </div>
-            </div>
-            <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
-              <div className="aspect-square overflow-hidden relative">
-                <img
-                  src="/lovable-uploads/54b13250-ef7b-4b39-86d6-498995e5602e.png"
-                  alt="AI Generated Orange Slice Being Cut"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <h3 className="text-white font-semibold text-sm">Food & Cooking</h3>
-                  <p className="text-white/80 text-xs">Dynamic culinary visuals</p>
-                </div>
-              </div>
-            </div>
-            <div className="group overflow-hidden rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card/80 backdrop-blur-sm border border-border">
-              <div className="aspect-square overflow-hidden relative">
-                <img
-                  src="/lovable-uploads/b4d2733a-8764-4520-89f8-af1b0403939f.png"
-                  alt="AI Generated Fashion Photography"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <h3 className="text-white font-semibold text-sm">Fashion & Style</h3>
-                  <p className="text-white/80 text-xs">Professional modeling shots</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content Article */}
-      <section className="py-16 lg:py-24 bg-background/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <article className="prose prose-lg max-w-none">
-            
-            {/* What Is Image to Video AI? */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <Video className="w-8 h-8 text-ai-blue" />
-                What Is Image to Video AI?
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Image to Video AI is a revolutionary technology that transforms static images into dynamic, animated video content using artificial intelligence. This cutting-edge approach leverages advanced machine learning algorithms to analyze the visual elements, depth, and context within a single image, then generates realistic motion and animation that brings the scene to life.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Unlike traditional video creation methods that require extensive footage or complex animation software, Image to Video AI can create compelling video content from just one photograph. The technology understands object relationships, predicts natural movement patterns, and generates smooth transitions that maintain the original image&apos;s quality and artistic intent.
-              </p>
-            </div>
-
-            {/* Why Image to Video Matters in 2025 */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <Sparkles className="w-8 h-8 text-ai-purple" />
-                Why Image to Video Matters in 2025
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                In 2025, visual content consumption has reached unprecedented levels, with video content generating 1200% more shares than text and images combined. Social media platforms prioritize video content in their algorithms, making it essential for businesses, creators, and marketers to adapt quickly. However, creating high-quality video content traditionally requires significant time, resources, and technical expertise.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Image to Video AI democratizes video creation, enabling anyone to transform their existing visual assets into engaging video content. This technology is particularly crucial for e-commerce businesses showcasing products, real estate professionals bringing property photos to life, and content creators looking to maximize their reach with minimal production overhead.
-              </p>
-            </div>
-
-            {/* Features Section */}
-            <div className="mb-16" id="features">
-              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <Wand2 className="w-8 h-8 text-ai-blue" />
-                Powerful Features
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Pixwith.ai combines cutting-edge AI technology with intuitive design to deliver professional-grade video generation from any static image.
+        
+        <div className="relative container mx-auto px-4 py-20 lg:py-32">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="mb-6 px-4 py-2 bg-ai-blue/10 text-ai-blue border-ai-blue/20">
+                <Star className="w-4 h-4 mr-2" />
+                #1 AI Video Generator 2025
+              </Badge>
+              
+              <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight">
+                <span className="bg-gradient-to-r from-ai-blue to-ai-purple bg-clip-text text-transparent">
+                  AI-Powered
+                </span>
+                <br />
+                <span className="text-foreground">Video Creation</span>
+              </h1>
+              
+              <p className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Transform any image into cinematic video content with our revolutionary AI technology. 
+                No editing skills required.
               </p>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Zap className="w-8 h-8 text-ai-blue" />
-                    <h3 className="text-xl font-semibold text-foreground">Lightning Fast Processing</h3>
-                  </div>
-                  <p className="text-muted-foreground">Generate high-quality videos in just 30-60 seconds using our optimized AI infrastructure and cloud processing power.</p>
-                </Card>
-
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20 hover:border-ai-purple/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <ImageIcon className="w-8 h-8 text-ai-purple" />
-                    <h3 className="text-xl font-semibold text-foreground">4K Quality Output</h3>
-                  </div>
-                  <p className="text-muted-foreground">Export your videos in stunning 4K resolution with crystal-clear details and professional-grade quality for any platform.</p>
-                </Card>
-
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Palette className="w-8 h-8 text-ai-blue" />
-                    <h3 className="text-xl font-semibold text-foreground">Multiple Motion Styles</h3>
-                  </div>
-                  <p className="text-muted-foreground">Choose from cinematic, ambient, parallax, zoom, and custom motion styles to match your creative vision.</p>
-                </Card>
-
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20 hover:border-ai-purple/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Shield className="w-8 h-8 text-ai-purple" />
-                    <h3 className="text-xl font-semibold text-foreground">Secure & Private</h3>
-                  </div>
-                  <p className="text-muted-foreground">Your images are processed securely and automatically deleted after 24 hours. Full privacy protection guaranteed.</p>
-                </Card>
-
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Users className="w-8 h-8 text-ai-blue" />
-                    <h3 className="text-xl font-semibold text-foreground">Batch Processing</h3>
-                  </div>
-                  <p className="text-muted-foreground">Upload and process multiple images simultaneously to save time and boost your productivity workflow.</p>
-                </Card>
-
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20 hover:border-ai-purple/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Video className="w-8 h-8 text-ai-purple" />
-                    <h3 className="text-xl font-semibold text-foreground">Multiple Formats</h3>
-                  </div>
-                  <p className="text-muted-foreground">Export in MP4, WebM, MOV, and GIF formats optimized for social media, web, and professional use.</p>
-                </Card>
-
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Sparkles className="w-8 h-8 text-ai-blue" />
-                    <h3 className="text-xl font-semibold text-foreground">Smart Object Detection</h3>
-                  </div>
-                  <p className="text-muted-foreground">Advanced AI identifies objects, people, and backgrounds to create natural, contextually appropriate motion effects.</p>
-                </Card>
-
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20 hover:border-ai-purple/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Clock className="w-8 h-8 text-ai-purple" />
-                    <h3 className="text-xl font-semibold text-foreground">Real-time Preview</h3>
-                  </div>
-                  <p className="text-muted-foreground">See motion effects in real-time before generating the final video, with instant preview and adjustment controls.</p>
-                </Card>
-
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20 hover:border-ai-blue/40 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Play className="w-8 h-8 text-ai-blue" />
-                    <h3 className="text-xl font-semibold text-foreground">Loop & Duration Control</h3>
-                  </div>
-                  <p className="text-muted-foreground">Customize video length from 3-15 seconds with seamless looping options for perfect social media content.</p>
-                </Card>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <HeroButton variant="primary" size="lg" className="group min-w-48" asChild>
+                  <a href="https://pixwith.ai/" target="_blank" rel="noopener noreferrer">
+                    <Play className="w-5 h-5 mr-2" />
+                    Try Free Now
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </HeroButton>
+                <Button variant="outline" size="lg" className="min-w-48 border-ai-blue/30 hover:border-ai-blue/50">
+                  <Video className="w-5 h-5 mr-2" />
+                  Watch Demo
+                </Button>
               </div>
             </div>
-
-            {/* How Pixwith.ai Works */}
-            <div className="mb-16" id="how-it-works">
-              <h2 className="text-3xl font-bold text-foreground mb-6">How Pixwith.ai Works (Step-by-Step)</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-ai-blue/20 flex items-center justify-center text-ai-blue font-bold">1</div>
-                    <h3 className="text-xl font-semibold text-foreground">Upload Your Image</h3>
-                  </div>
-                  <p className="text-muted-foreground">Simply drag and drop or select any image from your device. Our AI supports all major formats including JPEG, PNG, and WebP.</p>
-                </Card>
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-ai-purple/20 flex items-center justify-center text-ai-purple font-bold">2</div>
-                    <h3 className="text-xl font-semibold text-foreground">Choose Motion Style</h3>
-                  </div>
-                  <p className="text-muted-foreground">Select from various motion styles including subtle ambient movement, dramatic cinematic effects, or custom animation preferences.</p>
-                </Card>
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/20">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-ai-blue/20 flex items-center justify-center text-ai-blue font-bold">3</div>
-                    <h3 className="text-xl font-semibold text-foreground">AI Processing</h3>
-                  </div>
-                  <p className="text-muted-foreground">Our advanced AI analyzes your image, identifies key elements, and generates smooth, realistic motion in just 30-60 seconds.</p>
-                </Card>
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-purple/20">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-ai-purple/20 flex items-center justify-center text-ai-purple font-bold">4</div>
-                    <h3 className="text-xl font-semibold text-foreground">Download & Share</h3>
-                  </div>
-                  <p className="text-muted-foreground">Instantly download your high-quality video in multiple formats, ready for social media, presentations, or any other use case.</p>
-                </Card>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-ai-blue mb-2">10M+</div>
+                <div className="text-muted-foreground">Videos Created</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-ai-purple mb-2">30s</div>
+                <div className="text-muted-foreground">Average Processing</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-ai-cyan mb-2">4K</div>
+                <div className="text-muted-foreground">Max Resolution</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-ai-magenta mb-2">99%</div>
+                <div className="text-muted-foreground">Satisfaction Rate</div>
               </div>
             </div>
-
-            {/* Key Specifications */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Key Specifications</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <Clock className="w-12 h-12 text-ai-blue mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Lightning Fast</h3>
-                  <p className="text-muted-foreground">30-60 second processing time</p>
-                </div>
-                <div className="text-center">
-                  <ImageIcon className="w-12 h-12 text-ai-purple mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">High Resolution</h3>
-                  <p className="text-muted-foreground">Up to 4K video output</p>
-                </div>
-                <div className="text-center">
-                  <Palette className="w-12 h-12 text-ai-blue mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Multiple Formats</h3>
-                  <p className="text-muted-foreground">MP4, WebM, GIF export options</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Use Cases */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Use Cases for Image to Video AI</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Pixwith.ai&apos;s Image to Video technology serves diverse industries and creative applications. E-commerce businesses use it to create engaging product demonstrations, real estate agents bring property listings to life, and social media marketers increase engagement rates by up to 300%. Content creators, digital artists, and marketing professionals leverage our platform to transform static portfolios into dynamic showcases that capture audience attention and drive conversions.
-              </p>
-            </div>
-
-            {/* Motion Styles */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Motion Styles You Can Try</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Our platform offers various motion styles including Subtle Ambient (gentle, natural movement), Cinematic Drama (bold camera movements and dynamic effects), Parallax Depth (3D-like layered motion), and Custom Animation (user-defined motion parameters). Each style is optimized for different content types and viewing contexts.
-              </p>
-            </div>
-
-            {/* Trust & Safety */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <Shield className="w-8 h-8 text-ai-blue" />
-                Trust, Safety & Rights
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Pixwith.ai prioritizes user privacy and content security. All uploaded images are processed securely and automatically deleted after 24 hours. We maintain strict data protection protocols and ensure that users retain full rights to their original content and generated videos. Our platform includes built-in content filtering to prevent misuse and maintains compliance with international privacy regulations.
-              </p>
-            </div>
-
-            {/* Pricing */}
-            <div className="mb-16" id="pricing">
-              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <DollarSign className="w-8 h-8 text-ai-purple" />
-                Pricing Plans
-              </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <Card className="p-6 bg-card/50 backdrop-blur-sm">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Starter</h3>
-                  <p className="text-3xl font-bold text-ai-blue mb-4">$9<span className="text-sm text-muted-foreground">/month</span></p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> 50 video generations</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> HD quality output</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Basic motion styles</li>
-                  </ul>
-                </Card>
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-ai-blue/50">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Professional</h3>
-                  <p className="text-3xl font-bold text-ai-blue mb-4">$29<span className="text-sm text-muted-foreground">/month</span></p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> 200 video generations</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> 4K quality output</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> All motion styles</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Priority processing</li>
-                  </ul>
-                </Card>
-                <Card className="p-6 bg-card/50 backdrop-blur-sm">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Enterprise</h3>
-                  <p className="text-3xl font-bold text-ai-blue mb-4">Custom</p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Unlimited generations</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> API access</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Custom integrations</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Dedicated support</li>
-                  </ul>
-                </Card>
-              </div>
-            </div>
-
-            {/* Best Practices */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Best Practices for Using Image to Video AI</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                For optimal results, use high-resolution images with clear subjects and good contrast. Images with distinct foreground and background elements work best, as our AI can create more convincing depth and motion effects. Avoid heavily compressed or blurry images, and consider the final use case when selecting motion styles - subtle movements work well for professional content, while dramatic effects suit creative and entertainment applications.
-              </p>
-            </div>
-
-            {/* FAQ */}
-            <div className="mb-16" id="faq">
-              <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                <CheckCircle className="w-8 h-8 text-ai-blue" />
-                Frequently Asked Questions
-              </h2>
-              <div className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-ai-blue" />
-                      How long does it take to generate a video?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Most videos are generated within 30-60 seconds, depending on the complexity of the image and chosen motion style. Our advanced cloud infrastructure ensures fast processing even during peak usage.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <ImageIcon className="w-5 h-5 text-ai-purple" />
-                      What image formats are supported?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">We support JPEG, PNG, WebP, TIFF, and BMP formats. Maximum file size is 50MB with recommended dimensions of 1024x1024 pixels or higher for best results.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Shield className="w-5 h-5 text-ai-blue" />
-                      Can I use generated videos commercially?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Yes, all generated videos can be used for commercial purposes without additional licensing fees. You retain full rights to your original content and the AI-generated videos.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Video className="w-5 h-5 text-ai-purple" />
-                      What video formats can I export?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Export options include MP4 (H.264), WebM, MOV, and animated GIF formats. All formats are optimized for different platforms including social media, web, and professional use.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Palette className="w-5 h-5 text-ai-blue" />
-                      How many motion styles are available?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">We offer 8+ motion styles including Cinematic, Ambient, Parallax, Zoom, Pan, Rotate, and Custom options. Each style can be fine-tuned with intensity and direction controls.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-ai-purple" />
-                      Is batch processing available?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Yes, Professional and Enterprise plans include batch processing capabilities. Upload up to 50 images simultaneously and process them with the same or different motion styles.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-ai-blue" />
-                      Do you offer a free trial?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Yes! New users get 10 free video generations to test our platform. No credit card required for the trial, and you can upgrade to a paid plan anytime.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Zap className="w-5 h-5 text-ai-purple" />
-                      What's the maximum video resolution?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Professional plans support up to 4K (3840x2160) video output. Starter plans include HD (1920x1080) resolution, which is perfect for most social media and web applications.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Shield className="w-5 h-5 text-ai-blue" />
-                      How secure is my data?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">All uploads are encrypted in transit and at rest. Images are automatically deleted after 24 hours, and we never use your content to train our AI models or share it with third parties.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Play className="w-5 h-5 text-ai-purple" />
-                      Can I customize video length?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Generated videos are typically 3-5 seconds long, which is optimal for social media. Enterprise plans offer custom video lengths up to 15 seconds with loop options.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Sparkles className="w-5 h-5 text-ai-blue" />
-                      What makes your AI better than competitors?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Our proprietary temporal consistency algorithms ensure smooth, realistic motion while preserving image quality. We focus on natural movement patterns rather than generic effects.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Wand2 className="w-5 h-5 text-ai-purple" />
-                      Do you have API access?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Yes, Enterprise plans include full API access with comprehensive documentation, webhooks, and SDKs for popular programming languages. Perfect for integrating into existing workflows.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-ai-blue" />
-                      What are the system requirements?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Pixwith.ai is web-based and works on any modern browser. No special hardware or software installation required. Just a stable internet connection.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Video className="w-5 h-5 text-ai-purple" />
-                      Can I add music or sound effects?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Currently, we focus on visual animation. For audio integration, you can use our generated videos in video editing software to add your preferred music or sound effects.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-ai-blue" />
-                      Is there a mobile app available?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Our web platform is fully responsive and works great on mobile devices. A dedicated mobile app is in development and will be available in Q2 2025.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Palette className="w-5 h-5 text-ai-purple" />
-                      Can I edit the generated video further?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Yes! Our generated videos are compatible with all major video editing software. You can further customize colors, add text overlays, or combine multiple videos.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Shield className="w-5 h-5 text-ai-blue" />
-                      What if I'm not satisfied with the result?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">We offer unlimited re-generations within your plan limits. Try different motion styles and settings until you get the perfect result. Our support team is also here to help.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-ai-purple" />
-                      Do you offer volume discounts?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Yes! Enterprise plans include volume pricing. Contact our sales team for custom pricing based on your usage requirements and we'll create a tailored solution.</p>
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <Zap className="w-5 h-5 text-ai-blue" />
-                      How does the AI training work?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Our AI is trained on millions of video sequences and motion patterns. We use advanced neural networks to understand natural movement and apply it to static images while preserving quality.</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 flex items-center gap-2">
-                      <ImageIcon className="w-5 h-5 text-ai-purple" />
-                      Can I use AI-generated images?
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">Absolutely! Our platform works perfectly with AI-generated images from Midjourney, DALL-E, Stable Diffusion, or any other image generation tool. Just upload and animate!</p>
-                  </div>
-                </div>
-
-                <div className="text-center mt-12">
-                  <p className="text-muted-foreground text-lg mb-6">Still have questions?</p>
-                  <HeroButton variant="secondary" size="default" asChild>
-                    <a href="mailto:support@pixwith.ai">
-                      Contact Support
-                    </a>
-                  </HeroButton>
-                </div>
-              </div>
-            </div>
-
-            {/* Future of Image to Video AI */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6">The Future of Image to Video AI</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                The future of Image to Video AI points toward even more sophisticated capabilities, including real-time processing, advanced physics simulation, and integration with augmented reality platforms. As the technology evolves, we expect to see applications in virtual production, interactive media, and personalized content creation that will revolutionize how we create and consume visual media.
-              </p>
-            </div>
-
-            {/* Final Thoughts */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Final Thoughts: Why Choose Pixwith.ai?</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Pixwith.ai combines cutting-edge technology with user-friendly design to deliver the most advanced Image to Video AI platform available today. Our commitment to quality, security, and innovation makes us the preferred choice for professionals and creators worldwide. Whether you&apos;re looking to enhance your marketing materials, create engaging social content, or explore new creative possibilities, Pixwith.ai provides the tools and reliability you need to bring your static images to life.
-              </p>
-            </div>
-
-          </article>
+          </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 text-center bg-gradient-to-br from-ai-blue/10 via-background to-ai-purple/10 border-t border-border">
+      {/* How It Works Section */}
+      <section className="py-24 bg-card/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Transform Your Images?</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of creators who are already using Pixwith.ai to bring their images to life.
-          </p>
-          <HeroButton variant="primary" size="lg" asChild>
-            <a href="https://pixwith.ai/" target="_blank" rel="noopener noreferrer">
-              Start Your Free Trial
-            </a>
-          </HeroButton>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">How It Works</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Transform your images into videos in just three simple steps
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-12">
+              <div className="text-center group">
+                <div className="relative mb-8">
+                  <div className="w-24 h-24 mx-auto bg-gradient-to-br from-ai-blue to-ai-purple rounded-2xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
+                    <ImageIcon className="w-12 h-12 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-ai-blue rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Upload Image</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Simply drag & drop or upload any image. Our AI supports all major formats including JPEG, PNG, and WebP.
+                </p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="relative mb-8">
+                  <div className="w-24 h-24 mx-auto bg-gradient-to-br from-ai-purple to-ai-magenta rounded-2xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
+                    <Wand2 className="w-12 h-12 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-ai-purple rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Choose Style</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Select from various motion styles: cinematic, ambient, parallax, or custom settings to match your vision.
+                </p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="relative mb-8">
+                  <div className="w-24 h-24 mx-auto bg-gradient-to-br from-ai-cyan to-ai-blue rounded-2xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
+                    <Video className="w-12 h-12 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-ai-cyan rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Export Video</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Download your animated video in 4K quality within 30 seconds. Multiple formats available for any platform.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Minimal Footer */}
-      <footer className="py-8 border-t border-ai-blue/10 bg-background/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-6">
-              <a href="mailto:hello@pixwith.ai" className="hover:text-ai-blue transition-colors">
-                hello@pixwith.ai
-              </a>
-              <a href="#privacy" className="hover:text-ai-blue transition-colors">Privacy</a>
-              <a href="#terms" className="hover:text-ai-blue transition-colors">Terms</a>
+      {/* AI Generated Showcase */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 px-4 py-2 bg-ai-purple/10 text-ai-purple border-ai-purple/20">
+              <Sparkles className="w-4 h-4 mr-2" />
+              AI Gallery
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Transform Any Image</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              See the magic of AI in action with these stunning transformations
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {[
+              {
+                src: "/lovable-uploads/a580120b-b2a1-41b4-bfa4-71d424b1636b.png",
+                title: "Beauty & Lifestyle",
+                description: "Elegant product animation"
+              },
+              {
+                src: "/lovable-uploads/79e44702-268e-466b-9f94-588ed9bca666.png",
+                title: "Education & 3D",
+                description: "Interactive learning content"
+              },
+              {
+                src: "/lovable-uploads/54b13250-ef7b-4b39-86d6-498995e5602e.png",
+                title: "Food & Cooking",
+                description: "Dynamic culinary visuals"
+              },
+              {
+                src: "/lovable-uploads/b4d2733a-8764-4520-89f8-af1b0403939f.png",
+                title: "Fashion & Style",
+                description: "Professional modeling shots"
+              }
+            ].map((item, index) => (
+              <Card key={index} className="group overflow-hidden bg-card/50 border-border/50 hover:border-ai-blue/30 transition-all duration-500 hover:shadow-glow">
+                <div className="aspect-square overflow-hidden relative">
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                      <p className="text-white/80 text-sm">{item.description}</p>
+                      <Button size="sm" variant="outline" className="mt-4 border-white/20 text-white hover:bg-white/10">
+                        <Play className="w-4 h-4 mr-2" />
+                        View Animation
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-gradient-to-br from-ai-blue/5 via-background to-ai-purple/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 px-4 py-2 bg-ai-blue/10 text-ai-blue border-ai-blue/20">
+              <Layers className="w-4 h-4 mr-2" />
+              Powerful Features
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Everything You Need</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Professional-grade AI technology with intuitive controls for creators of all levels
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {[
+              {
+                icon: Zap,
+                title: "Lightning Speed",
+                description: "Generate high-quality videos in just 30-60 seconds using our optimized AI infrastructure",
+                color: "ai-blue"
+              },
+              {
+                icon: ImageIcon,
+                title: "4K Quality Output",
+                description: "Export videos in stunning 4K resolution with crystal-clear details for any platform",
+                color: "ai-purple"
+              },
+              {
+                icon: Palette,
+                title: "Multiple Motion Styles",
+                description: "Choose from cinematic, ambient, parallax, zoom, and custom motion styles",
+                color: "ai-cyan"
+              },
+              {
+                icon: Shield,
+                title: "Secure & Private",
+                description: "Images processed securely and deleted after 24 hours. Full privacy protection guaranteed",
+                color: "ai-magenta"
+              },
+              {
+                icon: Users,
+                title: "Batch Processing",
+                description: "Upload and process multiple images simultaneously to boost your productivity",
+                color: "ai-blue"
+              },
+              {
+                icon: Video,
+                title: "Multiple Formats",
+                description: "Export in MP4, WebM, MOV, and GIF formats optimized for social media and web",
+                color: "ai-purple"
+              },
+              {
+                icon: Sparkles,
+                title: "Smart Object Detection",
+                description: "Advanced AI identifies objects and backgrounds for natural motion effects",
+                color: "ai-cyan"
+              },
+              {
+                icon: Clock,
+                title: "Real-time Preview",
+                description: "See motion effects instantly before generating with preview controls",
+                color: "ai-magenta"
+              },
+              {
+                icon: Play,
+                title: "Loop & Duration Control",
+                description: "Customize video length from 3-15 seconds with seamless looping options",
+                color: "ai-blue"
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="group p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:border-ai-blue/30 transition-all duration-500 hover:shadow-glow hover:scale-105">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-${feature.color} to-${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-foreground">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-24 bg-card/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 px-4 py-2 bg-ai-cyan/10 text-ai-cyan border-ai-cyan/20">
+              <Globe className="w-4 h-4 mr-2" />
+              Real-World Applications  
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Perfect For Every Industry</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              From e-commerce to social media, discover how AI video generation transforms content creation
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {[
+              {
+                icon: "🛍️",
+                title: "E-Commerce",
+                description: "Transform product photos into engaging demos that increase conversions by 300%",
+                stat: "+300% conversions"
+              },
+              {
+                icon: "🏠", 
+                title: "Real Estate",
+                description: "Bring property listings to life with cinematic walkthroughs and ambient motion",
+                stat: "50% more views"
+              },
+              {
+                icon: "📱",
+                title: "Social Media",
+                description: "Create scroll-stopping content that drives engagement across all platforms",
+                stat: "5x engagement"
+              },
+              {
+                icon: "🎨",
+                title: "Creative Arts",
+                description: "Transform static portfolios into dynamic showcases that captivate audiences",
+                stat: "Professional quality"
+              }
+            ].map((useCase, index) => (
+              <Card key={index} className="group p-8 text-center bg-card/50 border-border/50 hover:border-ai-cyan/30 transition-all duration-500 hover:shadow-glow hover:scale-105">
+                <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {useCase.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-foreground">{useCase.title}</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">{useCase.description}</p>
+                <Badge className="bg-ai-cyan/10 text-ai-cyan border-ai-cyan/20">
+                  {useCase.stat}
+                </Badge>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 px-4 py-2 bg-ai-magenta/10 text-ai-magenta border-ai-magenta/20">
+              <DollarSign className="w-4 h-4 mr-2" />
+              Simple Pricing
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Choose Your Plan</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Start free and scale as you grow. No hidden fees, cancel anytime.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="p-8 bg-card/50 border-border/50 hover:border-ai-blue/30 transition-all duration-500">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-2">Starter</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-ai-blue">$9</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+                <ul className="space-y-4 text-left mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>50 video generations</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>HD quality output</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>Basic motion styles</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>Email support</span>
+                  </li>
+                </ul>
+                <Button className="w-full">Get Started</Button>
+              </div>
+            </Card>
+            
+            <Card className="p-8 bg-gradient-to-b from-ai-blue/10 to-ai-purple/10 border-ai-blue/50 relative overflow-hidden hover:shadow-glow transition-all duration-500 scale-105">
+              <Badge className="absolute top-4 right-4 bg-ai-blue text-white">Most Popular</Badge>
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-2">Professional</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-ai-blue">$29</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+                <ul className="space-y-4 text-left mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>200 video generations</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>4K quality output</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>All motion styles</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>Priority processing</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>Batch processing</span>
+                  </li>
+                </ul>
+                <HeroButton className="w-full" size="lg">Upgrade Now</HeroButton>
+              </div>
+            </Card>
+            
+            <Card className="p-8 bg-card/50 border-border/50 hover:border-ai-purple/30 transition-all duration-500">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-ai-purple">Custom</span>
+                </div>
+                <ul className="space-y-4 text-left mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>Unlimited generations</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>API access</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>Custom integrations</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>Dedicated support</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>SLA guarantee</span>
+                  </li>
+                </ul>
+                <Button variant="outline" className="w-full border-ai-purple/30 hover:border-ai-purple/50">Contact Sales</Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-24 bg-gradient-to-br from-ai-blue/10 via-background to-ai-purple/10 relative overflow-hidden border-t border-border/20">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-ai-blue/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-ai-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="relative container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <Badge className="mb-6 px-4 py-2 bg-ai-blue/10 text-ai-blue border-ai-blue/20">
+              <Star className="w-4 h-4 mr-2" />
+              Ready to Get Started?
+            </Badge>
+            
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8">
+              <span className="bg-gradient-to-r from-ai-blue to-ai-purple bg-clip-text text-transparent">
+                Create Stunning Videos
+              </span>
+              <br />
+              <span className="text-foreground">in Seconds</span>
+            </h2>
+            
+            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
+              Join thousands of creators who have transformed over 10 million images into captivating videos. 
+              Start your free trial today – no credit card required.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <HeroButton variant="primary" size="lg" className="group min-w-56" asChild>
+                <a href="https://pixwith.ai/" target="_blank" rel="noopener noreferrer">
+                  <Play className="w-5 h-5 mr-2" />
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </HeroButton>
+              <Button variant="outline" size="lg" className="min-w-56 border-ai-purple/30 hover:border-ai-purple/50">
+                <Video className="w-5 h-5 mr-2" />
+                View Examples
+              </Button>
             </div>
-            <p>© 2024 Pixwith.ai. All rights reserved.</p>
+            
+            <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-8 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span>Free trial • No credit card</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span>10 free videos</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span>Cancel anytime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Footer */}
+      <footer className="py-12 bg-card/50 border-t border-border/20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h3 className="text-lg font-bold mb-4 text-foreground">Pixwith.ai</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Transform your images into stunning videos with AI. Fast, secure, and professional quality.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4 text-foreground">Product</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#features" className="text-muted-foreground hover:text-ai-blue transition-colors">Features</a></li>
+                <li><a href="#pricing" className="text-muted-foreground hover:text-ai-blue transition-colors">Pricing</a></li>
+                <li><a href="/blog" className="text-muted-foreground hover:text-ai-blue transition-colors">Blog</a></li>
+                <li><a href="#faq" className="text-muted-foreground hover:text-ai-blue transition-colors">FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4 text-foreground">Company</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#about" className="text-muted-foreground hover:text-ai-blue transition-colors">About</a></li>
+                <li><a href="#contact" className="text-muted-foreground hover:text-ai-blue transition-colors">Contact</a></li>
+                <li><a href="#careers" className="text-muted-foreground hover:text-ai-blue transition-colors">Careers</a></li>
+                <li><a href="#press" className="text-muted-foreground hover:text-ai-blue transition-colors">Press</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4 text-foreground">Legal</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#privacy" className="text-muted-foreground hover:text-ai-blue transition-colors">Privacy Policy</a></li>
+                <li><a href="#terms" className="text-muted-foreground hover:text-ai-blue transition-colors">Terms of Service</a></li>
+                <li><a href="#security" className="text-muted-foreground hover:text-ai-blue transition-colors">Security</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="pt-8 border-t border-border/20">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-sm text-muted-foreground">
+                © 2025 Pixwith.ai. All rights reserved.
+              </div>
+              <div className="flex items-center gap-6">
+                <a href="mailto:hello@pixwith.ai" className="text-sm text-muted-foreground hover:text-ai-blue transition-colors">
+                  hello@pixwith.ai
+                </a>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm text-muted-foreground">All systems operational</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
