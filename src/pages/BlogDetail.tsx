@@ -1,14 +1,18 @@
 
 import Header from "@/components/Header";
 import { useParams, Link } from "react-router-dom";
-import { findPostByTitle } from "@/data/blogPosts";
+import { findPostByTitle, blogPosts, titleToUrl } from "@/data/blogPosts";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import { useEffect } from "react";
 
 const BlogDetail = () => {
   const { title } = useParams();
+  console.log('URL title param:', title);
+  
   const post = title ? findPostByTitle(title) : undefined;
+  console.log('Found post:', post?.title);
+  console.log('Available posts:', blogPosts.map(p => ({ title: p.title, url: titleToUrl(p.title) })));
 
   useEffect(() => {
     if (post) document.title = `${post.title} | Pixwith.ai Blog`;
