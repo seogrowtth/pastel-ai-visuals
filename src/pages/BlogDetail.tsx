@@ -1,14 +1,14 @@
 
 import Header from "@/components/Header";
 import { useParams, Link } from "react-router-dom";
-import { findPostBySlug } from "@/data/blogPosts";
+import { findPostByTitle } from "@/data/blogPosts";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import { useEffect } from "react";
 
 const BlogDetail = () => {
-  const { slug } = useParams();
-  const post = slug ? findPostBySlug(slug) : undefined;
+  const { title } = useParams();
+  const post = title ? findPostByTitle(title) : undefined;
 
   useEffect(() => {
     if (post) document.title = `${post.title} | Pixwith.ai Blog`;

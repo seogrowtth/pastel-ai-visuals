@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 import { Link } from "react-router-dom";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts, titleToUrl } from "@/data/blogPosts";
 
 const Blog = () => {
 
@@ -60,7 +60,7 @@ const Blog = () => {
             {blogPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${post.slug}`}
+                to={`/blog/${titleToUrl(post.title)}`}
                 className="group block"
               >
                 <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-ai-blue/30 transition-all duration-300 hover:shadow-card cursor-pointer">

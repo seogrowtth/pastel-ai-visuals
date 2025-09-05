@@ -1,6 +1,5 @@
 export type BlogPost = {
   id: number;
-  slug: string;
   title: string;
   excerpt: string;
   author: string;
@@ -10,10 +9,19 @@ export type BlogPost = {
   content: string[]; // paragraphs with headings
 };
 
+// Helper function to convert title to URL-friendly format
+export const titleToUrl = (title: string): string => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim();
+};
+
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    slug: "best-ai-tools-to-animate-images-into-videos-2025-guide",
     title: "Best AI Tools to Animate Images into Videos (2025 Guide)",
     excerpt:
       "Discover the top AI-powered tools that transform static images into dynamic videos. From beginner-friendly options to professional-grade solutions, find the perfect tool for your creative needs.",
@@ -49,7 +57,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 2,
-    slug: "how-image-to-video-ai-is-transforming-social-media-marketing",
     title: "How Image to Video AI is Transforming Social Media Marketing",
     excerpt:
       "Learn how brands are revolutionizing their social media presence with AI-generated video content. Explore case studies, best practices, and ROI metrics that matter.",
@@ -91,7 +98,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
-    slug: "step-by-step-how-to-turn-a-still-photo-into-a-cinematic-video",
     title: "Step-by-Step: How to Turn a Still Photo into a Cinematic Video",
     excerpt:
       "Master the art of creating cinematic videos from static images. This comprehensive tutorial covers everything from preparation to final export with professional tips.",
@@ -142,7 +148,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    slug: "top-5-motion-styles-every-creator-should-try-with-ai-video-generators",
     title: "Top 5 Motion Styles Every Creator Should Try with AI Video Generators",
     excerpt:
       "Explore the most popular and effective motion styles in AI video generation. Learn when and how to use each style to maximize visual impact and engagement.",
@@ -189,7 +194,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 5,
-    slug: "why-short-form-video-beats-static-images-for-engagement",
     title: "Why Short-Form Video Beats Static Images for Engagement",
     excerpt:
       "Dive deep into the psychology and data behind why video content outperforms static images across all platforms. Discover actionable strategies to boost your engagement rates.",
@@ -238,7 +242,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 6,
-    slug: "image-to-video-ai-vs-traditional-animation-which-is-right-for-you",
     title: "Image to Video AI vs Traditional Animation: Which is Right for You?",
     excerpt:
       "Compare the pros and cons of AI-powered image animation versus traditional animation methods. Make informed decisions based on budget, timeline, and quality requirements.",
@@ -299,7 +302,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 7,
-    slug: "the-future-of-ai-video-generation-from-photos-to-hollywood-level-films",
     title: "The Future of AI Video Generation: From Photos to Hollywood-Level Films",
     excerpt:
       "Explore the cutting-edge developments in AI video technology and their potential impact on the entertainment industry. What does the future hold for AI-generated content?",
@@ -355,7 +357,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 8,
-    slug: "how-artists-and-designers-are-using-image-to-video-ai-to-showcase-portfolios",
     title: "How Artists & Designers Are Using Image to Video AI to Showcase Portfolios",
     excerpt:
       "Discover innovative ways creative professionals are leveraging AI video tools to bring their portfolios to life and attract more clients in competitive markets.",
@@ -409,7 +410,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 9,
-    slug: "10-creative-marketing-campaigns-powered-by-image-to-video-ai",
     title: "10 Creative Marketing Campaigns Powered by Image to Video AI",
     excerpt:
       "Analyze successful marketing campaigns that utilized AI image-to-video technology. Learn from real-world examples and apply these strategies to your own campaigns.",
@@ -473,7 +473,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 10,
-    slug: "choosing-the-best-ai-image-animator-features-specs-and-pricing-compared",
     title: "Choosing the Best AI Image Animator: Features, Specs, and Pricing Compared",
     excerpt:
       "A comprehensive comparison of leading AI image animation platforms. Detailed analysis of features, pricing, and performance to help you make the right choice.",
@@ -542,4 +541,5 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
-export const findPostBySlug = (slug: string) => blogPosts.find((p) => p.slug === slug);
+export const findPostByTitle = (titleUrl: string) => 
+  blogPosts.find((p) => titleToUrl(p.title) === titleUrl);
